@@ -1,0 +1,412 @@
+
+$color-nordic-teal-250: rgb(0, 125, 128);
+$color-warning-yellow-480: rgb(245, 175, 0);
+$color-clear-blue-900: rgb(207, 236, 252);
+$primary: rgb(0, 125, 128);
+$color-nordic-teal-650: rgb(143, 187, 188);
+$color-info-blue-950: rgb(229, 242, 255);
+$color-nordic-teal-200: rgb(0, 100, 102);
+$color-danger-red-300: rgb(115, 38, 38);
+$color-nordic-teal-750: rgb(172, 210, 210);
+$color-nordic-teal-300: rgb(0, 150, 153);
+$color-danger-red-400: rgb(153, 51, 51);
+$color-nordic-teal-850: rgb(201, 232, 232);
+$color-nordic-teal-950: rgb(236, 248, 249);
+$color-warning-yellow-920: rgb(255, 243, 214);
+$color-error-red-470: rgb(198, 42, 60);
+$color-nordic-teal-900: rgb(218, 241, 241);
+$color-calm-grey-150: rgb(34, 39, 42);
+$color-navy-blue-180: rgb(6, 58, 86);
+$color-error-red-960: rgb(255, 235, 238);
+$color-calm-grey-790: rgb(199, 205, 209);
+$color-calm-grey-450: rgb(103, 118, 126);
+$secondary: rgb(6, 58, 86);
+$color-black-0: rgb(0, 0, 0);
+$color-clear-blue-250: rgb(8, 80, 119);
+$color-calm-grey-960: rgb(244, 245, 246);
+$color-calm-grey-630: rgb(151, 163, 170);
+$color-calm-grey-300: rgb(69, 79, 84);
+$color-clear-blue-350: rgb(12, 113, 167);
+$color-happy-green-350: rgb(68, 153, 51);
+$color-clear-blue-450: rgb(15, 145, 215);
+$color-clear-purple-350: rgb(89, 41, 137);
+$color-calm-grey-800: rgb(196, 203, 207);
+$color-clear-blue-960: rgb(236, 247, 254);
+$color-calm-grey-900: rgb(227, 230, 232);
+$color-happy-green-950: rgb(236, 252, 232);
+$color-info-blue-350: rgb(57, 127, 198);
+$color-clear-blue-930: rgb(222, 242, 253);
+$color-white-100: rgb(255, 255, 255);
+$font-size-xl: 1.75rem;
+$font-size-xxxl: 3rem;
+$font-size-s: 0.875rem;
+$font-size-xs: 0.75rem;
+$font-size-h1: 2.25rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.125rem;
+$font-size-h4: 1rem;
+$font-size-h5: 0.875rem;
+$font-size-h6: 0.75rem;
+$font-size-l: 1.25rem;
+$font-size-xxl: 2,25rem;
+$font-size-m: 1rem;
+$font-heading: 'Fira Sans', Roboto, Helvetica, Arial, sans-serif;
+$font-text: Roboto, Helvetica, Arial, sans-serif;
+$weight-bold: 700;
+$weight-semi-bold: 600;
+$weight-normal: 400;
+$weight-light: 300;
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+$opacity-disabled: 0.5;
+$height-footer: 64px;
+$tappable-square: 44px;
+$duration-quickly: 0.08s;
+$duration-slowly: 0.5s;
+$z-index-modal: 9999;
+$z-index-sticky: 100;
+$media-query-m: (min-width: 768px);
+$media-query-l: (min-width: 1024px);
+$shadow-s: 0 1px 2px 0 rgba(0, 0, 0, .2);
+$spacing-xl: 2px;
+$spacing-l: 1px;
+$spacing-m: 0;
+$spacing-s: -0.5px;
+$spacing-xs: -1px;
+$radius-default: 3px;
+$radius-circle: 50%;
+$space-xxl: 128px;
+$space-xl: 64px;
+$space-l: 48px;
+$space-m: 24px;
+$space-s: 16px;
+$space-xs: 8px;
+$space-xxs: 4px;
+$line-height-m: 1.6;
+$line-height-s: 1.3;
+$line-height-xs: 1;
+
+/* Spin Design System SPACING HELPERS
+--------------------------------------------- */
+
+$spacing-ratio: 1.7;
+
+/*
+  INSET-SPACE: For interface containers.
+  INSET-SQUISH-SPACE: For buttons, form elements, cells.
+  STACK-SPACE: For vertically stacked content.
+  INLINE-SPACE: For things displayed inline.
+*/
+
+// Create inset-space
+//
+// @param  {Number} inset-space to set
+@mixin inset-space($value) {
+  padding: $value;
+}
+
+// Create inset-squish-space
+//
+// @param  {Number} inset-squish-space to set
+@mixin inset-squish-space($value) {
+  padding: round($value / $spacing-ratio - 1px) $value round($value / $spacing-ratio);
+}
+
+// Create stack-space
+//
+// @param  {Number} stack-space to set
+@mixin stack-space($value) {
+  margin-bottom: $value;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Create inline-space
+//
+// @param  {Number} inline-space to set
+@mixin inline-space($value) {
+  margin-right: $value;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* GLOBAL MIXINS
+--------------------------------------------- */
+
+/* AUTO SCALING FOR TYPE WITH MIN/MAX SIZES
+
+  @param {Number}  $responsive  - Viewport-based size
+  @param {Number}  $min         - Minimum font size (px)
+  @param {Number}  $max         - Maximum font size (px) (optional)
+
+  @param {Number}  $fallback    - Fallback for viewport-based units (optional)
+
+  @example SCSS - 5vw size, 35px min & 150px max size + 50px fallback:
+
+  @include responsive-font(5vw, 35px, 150px, 50px);
+*/
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == "vh", "height", "width");
+  $min-breakpoint: $min / $responsive-unitless * 100;
+
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+
+  @if $fallback {
+    font-size: $fallback;
+  }
+
+  font-size: $responsive;
+}
+
+// Reset
+@mixin reset {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+// Used to prevent text selection on an element
+@mixin prevent-user-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/// Used to hide an element visually, but keeping it accessible for
+/// accessibility tools.
+@mixin visually-hidden {
+  // Need to make sure we override any existing styles.
+  position: absolute !important;
+  top: 0;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  overflow: hidden !important;
+  height: 1px !important;
+  width: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+/// To be used on flex items. Resolves some common layout issues, such as
+/// text truncation not respecting padding or breaking out of container.
+/// https://css-tricks.com/flexbox-truncated-text/
+@mixin layout-flex-fix {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* GLOBAL FUNCTIONS
+--------------------------------------------- */
+
+// Create a tint
+//
+// @param  {Color}  $color to tint
+// @param  {Number} $percentage of `$color` in returned color
+// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Create a shade
+//
+// @param  {Color}  $color to shade
+// @param  {Number} $percentage of `$color` in returned color
+// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+// Calculate color difference
+// See https://www.w3.org/TR/AERT/#color-contrast for algorithm
+//
+// @param  {Color} $color of foreground
+// @param  {Color} $color of background
+// @return {Boolean}
+@function color-difference($foreground, $background) {
+  $r: (max(red($foreground), red($background))) - (min(red($foreground), red($background)));
+  $g: (max(green($foreground), green($background))) - (min(green($foreground), green($background)));
+  $b: (max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background)));
+  $sum-rgb: $r + $g + $b;
+
+  @if $sum-rgb < 350 {
+    @return "false";
+  } @else {
+    @return "true";
+  }
+}
+
+// Set text color based on contrast
+//
+// @param  {Color}  $color to set
+// @param  {Color}  $background color to test
+// @param  {Color}  $fallback color to set in case contrast check fails
+@function set-text-color($color, $background, $fallback: null) {
+  @if $fallback == null {
+    $fallback: #000;
+  }
+  @if (color-difference($color, $background) == "false") {
+    @return $fallback;
+  } @else {
+    @return $color;
+  }
+}
+
+/// Darkens the foreground color by the background color. This is the same as the
+/// “multiply” filter in graphics apps.
+///
+/// @param {Color} $foreground - The color to darken.
+/// @param {Color} $background - The background to base darkening on.
+/// @return {Color} The modified color.
+@function color-multiply($foreground, $background: null) {
+  @if $background == null {
+    $background: #ffffff;
+  }
+
+  @return $foreground * $background / 255;
+}
+
+/// Returns the value in rem for a given pixel value.
+/// @param {Number} $value - The pixel value to be converted.
+/// @return {Number} The converted value in rem.
+@function rem($value) {
+  $unit: unit($value);
+
+  @if $unit == "rem" {
+    @return $value;
+  } @else if $unit == "px" {
+    @return $value / $size-m * 1rem;
+  } @else if $unit == "em" {
+    @return $unit / 1em * 1rem;
+  } @else {
+    @error "Value must be in px, em, or rem.";
+  }
+}
+
+/// Returns the value in pixels for a given rem value.
+/// @param {Number} $value - The rem value to be converted.
+/// @return {Number} The converted value in pixels.
+@function px($value) {
+  $unit: unit($value);
+
+  @if $unit == "px" {
+    @return $value;
+  } @else if $unit == "em" {
+    @return ($value / 1em) * $size-m;
+  } @else if $unit == "rem" {
+    @return ($value / 1rem) * $size-m;
+  } @else {
+    @error "Value must be in rem, em, or px.";
+  }
+}
+
+/// Returns the list of available names in a given map.
+/// @param {Map} $map - The map of data to list the names from.
+/// @param {Number} $map - The level of depth to get names from.
+/// @return {String} The list of names in the map.
+@function available-names($map, $level: 1) {
+  @if type-of($map) != "map" {
+    @return null;
+  }
+
+  $output: "";
+  $newline: "\A ";
+
+  @if $level == 1 {
+    @each $key, $value in $map {
+      $output: $output + "#{$newline}- #{$key} #{available-names($value, $level + 1)}";
+    }
+  } @else {
+    $output: "(";
+    $i: 1;
+
+    @each $key, $value in $map {
+      $sep: if($i < length($map), ", ", "");
+      $output: $output + "#{$key}#{$sep}#{available-names($value, $level + 1)}";
+      $i: $i + 1;
+    }
+
+    $output: $output + ")";
+  }
+
+  @return $output;
+}
+
+// --- BootstrapVue Custom SCSS ---
+@import "variables";
+
+/*!
+ * Bootstrap v4.6.2 (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Copyright 2011-2022 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+// --- BootstrapVue Custom SCSS ---
+
+// Requires at least the Bootstrap functions, variables and
+// mixins to be imported first
+
+// Include variables and utilities first
+@import "variables";
+@import "utilities";
+
+// General styling needed for special form controls
+@import "custom-controls";
+
+// Include custom SCSS for components
+@import "components/index";
+
+// Include custom SCSS for icons
+@import "icons/index";
