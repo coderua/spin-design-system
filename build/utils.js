@@ -82,16 +82,27 @@ exports.cssLoaders = function(options) {
 
   const sassOptions = {
     outputStyle: "compressed",
+    quietDeps: true,
+    // Suppress current deprecations until Bootstrap 4 and project SCSS are migrated.
+    silenceDeprecations: [
+      "abs-percent",
+      "color-functions",
+      "global-builtin",
+      "if-function",
+      "import",
+      "legacy-js-api",
+      "slash-div",
+    ],
   }
 
   // https://vue-loader.vuejs.org/guide/extract-css.html
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    sass: generateLoaders("sass", Object.assign({ indentedSyntax: true }, sassOptions)).concat(
-      sassResourcesConfig
-    ),
-    scss: generateLoaders("sass", sassOptions).concat(sassResourcesConfig),
+    sass: generateLoaders("sass", {
+      sassOptions: Object.assign({ indentedSyntax: true }, sassOptions),
+    }).concat(sassResourcesConfig),
+    scss: generateLoaders("sass", { sassOptions }).concat(sassResourcesConfig),
   }
 }
 

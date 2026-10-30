@@ -1,21 +1,30 @@
 {
   "aliases": {
-    "nordic_teal_hs": {
-      "value": "181, 100%"
+    "mustard_hs": {
+      "value": "40, 100%"
     },
-    "clear_blue_hs": {
+    "navy_blue_hs": {
       "value": "201, 87%"
     },
     "calm_grey_hs": {
       "value": "202, 10%"
     },
-    "danger_red_hs": {
-      "value": "360, 50%"
+    "goldenrod_hs": {
+      "value": "51, 100%"
     },
     "warning_yellow_hs": {
       "value": "43, 100%"
     },
-    "navy_blue_hs": {
+    "danger_red_hs": {
+      "value": "360, 50%"
+    },
+    "silver_grey_hs": {
+      "value": "0, 0%"
+    },
+    "nordic_teal_hs": {
+      "value": "181, 100%"
+    },
+    "clear_blue_hs": {
       "value": "201, 87%"
     }
   },
@@ -29,10 +38,17 @@
     },
     "color_warning_yellow_480": {
       "type": "color",
-      "category": "color_group_7",
+      "category": "color_group_14",
       "value": "rgb(245, 175, 0)",
       "originalValue": "hsl({!warning_yellow_hs}, 48%)",
       "name": "color_warning_yellow_480"
+    },
+    "color_salmon_930": {
+      "type": "color",
+      "category": "color_group_13",
+      "value": "rgb(254, 239, 220)",
+      "originalValue": "hsl(33, 94%, 93%)",
+      "name": "color_salmon_930"
     },
     "color_clear_blue_900": {
       "type": "color",
@@ -48,6 +64,13 @@
       "originalValue": "hsl({!nordic_teal_hs}, 25%)",
       "name": "primary"
     },
+    "color_rose_quartz_960": {
+      "type": "color",
+      "category": "color_group_16",
+      "value": "rgb(254, 236, 236)",
+      "originalValue": "hsl(3, 91%, 96%)",
+      "name": "color_rose_quartz_960"
+    },
     "color_nordic_teal_650": {
       "type": "color",
       "category": "color_group_2",
@@ -57,7 +80,7 @@
     },
     "color_info_blue_950": {
       "type": "color",
-      "category": "color_group_6",
+      "category": "color_group_9",
       "value": "rgb(229, 242, 255)",
       "originalValue": "hsl(210, 100%, 95%)",
       "name": "color_info_blue_950"
@@ -71,7 +94,7 @@
     },
     "color_danger_red_300": {
       "type": "color",
-      "category": "color_group_9",
+      "category": "color_group_18",
       "value": "rgb(115, 38, 38)",
       "originalValue": "hsl({!danger_red_hs}, 30%)",
       "name": "color_danger_red_300"
@@ -92,7 +115,7 @@
     },
     "color_danger_red_400": {
       "type": "color",
-      "category": "color_group_9",
+      "category": "color_group_18",
       "value": "rgb(153, 51, 51)",
       "originalValue": "hsl({!danger_red_hs}, 40%)",
       "name": "color_danger_red_400"
@@ -111,16 +134,23 @@
       "originalValue": "hsl(181, 50%, 95%)",
       "name": "color_nordic_teal_950"
     },
+    "color_silver_grey_970": {
+      "type": "color",
+      "category": "color_group_5",
+      "value": "rgb(247, 247, 247)",
+      "originalValue": "hsl({!silver_grey_hs}, 97%)",
+      "name": "color_silver_grey_970"
+    },
     "color_warning_yellow_920": {
       "type": "color",
-      "category": "color_group_7",
+      "category": "color_group_14",
       "value": "rgb(255, 243, 214)",
       "originalValue": "hsl({!warning_yellow_hs}, 92%)",
       "name": "color_warning_yellow_920"
     },
     "color_error_red_470": {
       "type": "color",
-      "category": "color_group_8",
+      "category": "color_group_17",
       "value": "rgb(198, 42, 60)",
       "originalValue": "hsl(353, 65%, 47%)",
       "name": "color_error_red_470"
@@ -131,6 +161,27 @@
       "value": "rgb(218, 241, 241)",
       "originalValue": "hsl(181, 45%, 90%)",
       "name": "color_nordic_teal_900"
+    },
+    "color_silver_grey_800": {
+      "type": "color",
+      "category": "color_group_5",
+      "value": "rgb(204, 204, 204)",
+      "originalValue": "hsl({!silver_grey_hs}, 80%)",
+      "name": "color_silver_grey_800"
+    },
+    "color_calm_grey_280": {
+      "type": "color",
+      "category": "color_group_4",
+      "value": "rgb(64, 73, 79)",
+      "originalValue": "hsl({!calm_grey_hs}, 28%)",
+      "name": "color_calm_grey_280"
+    },
+    "color_good_green_430": {
+      "type": "color",
+      "category": "color_group_7",
+      "value": "rgb(65, 155, 107)",
+      "originalValue": "hsl(148, 41%, 43%)",
+      "name": "color_good_green_430"
     },
     "color_calm_grey_150": {
       "type": "color",
@@ -148,7 +199,7 @@
     },
     "color_error_red_960": {
       "type": "color",
-      "category": "color_group_8",
+      "category": "color_group_17",
       "value": "rgb(255, 235, 238)",
       "originalValue": "hsl(351, 100%, 96%)",
       "name": "color_error_red_960"
@@ -156,8 +207,8 @@
     "color_calm_grey_790": {
       "type": "color",
       "category": "color_group_4",
-      "value": "rgb(199, 205, 209)",
-      "originalValue": "hsl({!calm_grey_hs}, 80%)",
+      "value": "rgb(196, 203, 207)",
+      "originalValue": "hsl({!calm_grey_hs}, 79%)",
       "name": "color_calm_grey_790"
     },
     "color_calm_grey_450": {
@@ -180,6 +231,20 @@
       "value": "rgb(0, 0, 0)",
       "originalValue": "hsl(0, 0%, 0%)",
       "name": "color_black_0"
+    },
+    "color_crimson_540": {
+      "type": "color",
+      "category": "color_group_15",
+      "value": "rgb(239, 47, 37)",
+      "originalValue": "hsl(3, 86%, 54%)",
+      "name": "color_crimson_540"
+    },
+    "color_good_green_910": {
+      "type": "color",
+      "category": "color_group_7",
+      "value": "rgb(225, 239, 232)",
+      "originalValue": "hsl(150, 32%, 91%)",
+      "name": "color_good_green_910"
     },
     "color_clear_blue_250": {
       "type": "color",
@@ -218,10 +283,17 @@
     },
     "color_happy_green_350": {
       "type": "color",
-      "category": "color_group_5",
+      "category": "color_group_6",
       "value": "rgb(68, 153, 51)",
       "originalValue": "hsl(110, 50%, 40%)",
       "name": "color_happy_green_350"
+    },
+    "color_goldenrod_500": {
+      "type": "color",
+      "category": "color_group_10",
+      "value": "rgb(255, 217, 0)",
+      "originalValue": "hsl({!goldenrod_hs}, 50%)",
+      "name": "color_goldenrod_500"
     },
     "color_clear_blue_450": {
       "type": "color",
@@ -237,11 +309,32 @@
       "originalValue": "hsl(270, 54%, 35%)",
       "name": "color_clear_purple_350"
     },
+    "color_amber_540": {
+      "type": "color",
+      "category": "color_group_12",
+      "value": "rgb(247, 149, 29)",
+      "originalValue": "hsl(33, 93%, 54%)",
+      "name": "color_amber_540"
+    },
+    "color_moderate_green_940": {
+      "type": "color",
+      "category": "color_group_8",
+      "value": "rgb(233, 247, 240)",
+      "originalValue": "hsl(150, 47%, 94%)",
+      "name": "color_moderate_green_940"
+    },
+    "color_moderate_green_600": {
+      "type": "color",
+      "category": "color_group_8",
+      "value": "rgb(107, 199, 150)",
+      "originalValue": "hsl(148, 45%, 60%)",
+      "name": "color_moderate_green_600"
+    },
     "color_calm_grey_800": {
       "type": "color",
       "category": "color_group_4",
-      "value": "rgb(196, 203, 207)",
-      "originalValue": "hsl({!calm_grey_hs}, 79%)",
+      "value": "rgb(199, 205, 209)",
+      "originalValue": "hsl({!calm_grey_hs}, 80%)",
       "name": "color_calm_grey_800"
     },
     "color_clear_blue_960": {
@@ -260,14 +353,21 @@
     },
     "color_happy_green_950": {
       "type": "color",
-      "category": "color_group_5",
+      "category": "color_group_6",
       "value": "rgb(236, 252, 232)",
       "originalValue": "hsl(110, 77%, 95%)",
       "name": "color_happy_green_950"
     },
+    "color_mustard_450": {
+      "type": "color",
+      "category": "color_group_11",
+      "value": "rgb(230, 153, 0)",
+      "originalValue": "hsl({!mustard_hs}, 45%)",
+      "name": "color_mustard_450"
+    },
     "color_info_blue_350": {
       "type": "color",
-      "category": "color_group_6",
+      "category": "color_group_9",
       "value": "rgb(57, 127, 198)",
       "originalValue": "hsl(210, 55%, 50%)",
       "name": "color_info_blue_350"

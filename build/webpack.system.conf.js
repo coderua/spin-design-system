@@ -50,7 +50,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       cssProcessorOptions: { parser: SafeParser },
     }),
     // keep module.id stable when vendor modules does not change
-    new webpack.HashedModuleIdsPlugin(),
+    new webpack.HashedModuleIdsPlugin({ hashFunction: "sha256" }),
     // enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
     // Copy and merge Sass tokens and system utilities as well

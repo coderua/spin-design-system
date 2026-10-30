@@ -1,4 +1,4 @@
-FROM node:14.15.0 AS build
+FROM node:24.22.2 AS build
 
 ARG npm_config_registry
 
@@ -6,10 +6,10 @@ WORKDIR /src
 
 COPY . ./
 
-RUN npm i &&\
+RUN npm ci &&\
     npm run build:docs
 
-FROM gcr.io/distroless/nodejs:14
+FROM gcr.io/distroless/nodejs24
 
 USER 65534
 COPY --from=build --chown=65534 /src /app

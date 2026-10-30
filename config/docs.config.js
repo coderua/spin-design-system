@@ -178,7 +178,24 @@ module.exports = {
             "style-loader",
             "css-loader",
             "postcss-loader",
-            "sass-loader",
+            {
+              loader: "sass-loader",
+              options: {
+                sassOptions: {
+                  quietDeps: true,
+                  // Suppress current deprecations until Bootstrap 4 and project SCSS are migrated.
+                  silenceDeprecations: [
+                    "abs-percent",
+                    "color-functions",
+                    "global-builtin",
+                    "if-function",
+                    "import",
+                    "legacy-js-api",
+                    "slash-div",
+                  ],
+                },
+              },
+            },
             {
               loader: "sass-resources-loader",
               options: {

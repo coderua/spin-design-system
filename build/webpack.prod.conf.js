@@ -64,7 +64,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // keep module.id stable when vendor modules does not change
     new webpack.NamedChunksPlugin(),
-    new webpack.HashedModuleIdsPlugin(),
+    new webpack.HashedModuleIdsPlugin({ hashFunction: "sha256" }),
 
     // copy custom static assets
     new CopyWebpackPlugin([
